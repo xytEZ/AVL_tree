@@ -35,10 +35,11 @@ int main()
   
   Tree::AVLTree<int> tree;
   
-  std::cout << "( ( ( ( Insert 16, -35, -99 ) ) ) )" << std::endl;
+  std::cout << "( ( ( ( Insert 16, -35, -99, -35 ) ) ) )" << std::endl;
   tree.insert(16);
   tree.insert(-35);
   tree.insert(-99);
+  tree.insert(-35);
   std::cout << std::endl;
 
 

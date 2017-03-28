@@ -181,9 +181,11 @@ namespace Tree
   {
     bool isInserted = true;
     
-    if (_root
-	&& (isInserted = insert(_root, value)))
-      rootReset();
+    if (_root)
+      {
+	if ((isInserted = insert(_root, value)))
+	  rootReset();
+      }
     else
       _root = new Node(value);
     if (isInserted)
@@ -195,9 +197,11 @@ namespace Tree
   {
     bool isInserted = true;
     
-    if (_root
-	&& (isInserted = insert(_root, std::forward<T>(value))))
-      rootReset();
+    if (_root)
+      {
+	if ((isInserted = insert(_root, std::forward<T>(value))))
+	  rootReset();
+      }
     else
       _root = new Node(std::forward<T>(value));
     if (isInserted)
