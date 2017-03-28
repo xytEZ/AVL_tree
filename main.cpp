@@ -88,12 +88,13 @@ int main()
 
   std::cout << std::endl;
 
-  std::cout << "( ( ( ( Erase 20, -99, 38, -35, 16 ) ) ) )" << std::endl;
+  std::cout << "( ( ( ( Erase 20, -99, 38, -35, 16, 38 ) ) ) )" << std::endl;
   tree2.erase(20);
   tree2.erase(-99);
   tree2.erase(38);
   tree2.erase(-35);
   tree2.erase(16);
+  tree2.erase(38);
   std::cout << std::endl;
 
   std::cout << "----------------------------------------------------------"
@@ -208,12 +209,16 @@ int main()
 
 
 
+
  Tree state n°3 :
 
-                                           ( Double right-left rotation )
+                                             ( Double right-left rotation )
                                                
 
+
+         [ Before erasing 8, 12 ]                  [ After erasing ]
                  
+
                    19             		          19			                26
                                  
                  /    \         Right rotation          /    \	      Left rotation	      /    \
@@ -229,10 +234,16 @@ int main()
                   22    29                                     29    72
 
 
+
+
+
  Tree state n°4 :
 
-                                           ( Double left-right rotation )
+                                             ( Double left-right rotation )
 
+
+
+         [ Before erasing 64, 80 ]                 [ After erasing ]
 
 
                    50					  50					42
